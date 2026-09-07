@@ -34,12 +34,6 @@ struct XcodesApp: App {
                     appDelegate.showAboutWindow()
                 }
             }
-            CommandGroup(after: .appInfo) {
-                Button("Menu.CheckForUpdates") {
-                    updater.checkForUpdates()
-                }
-            }
-
             CommandGroup(after: CommandGroupPlacement.newItem) {
                 Button("Refresh") {
                     appState.update()
@@ -52,7 +46,7 @@ struct XcodesApp: App {
 
             CommandGroup(replacing: CommandGroupPlacement.help) {
                 Button("Menu.GitHubRepo") {
-                    let xcodesRepoURL = URL(string: "https://github.com/XcodesOrg/XcodesApp/")!
+                    let xcodesRepoURL = URL(string: "https://github.com/arifali123/XcodesApp/")!
                     openURL(xcodesRepoURL)
                 }
 

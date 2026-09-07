@@ -1,10 +1,11 @@
 <h1><img src="icon.png" align="center" width=50 height=50 /> <img src="IconDark.png" align="center" width=50 height=50 /> <img src="IconMono.png" align="center" width=50 height=50 /> Xcodes.app</h1>
 
+> **This is a fork** of [XcodesOrg/XcodesApp](https://github.com/XcodesOrg/XcodesApp) with a hardware security-key sign-in fix ([LibFido2Swift 0.1.6](https://github.com/kinoroy/LibFido2Swift/releases/tag/0.1.6)).
+> If your Apple account uses a hardware security key, **use this build instead of official Xcodes**. Both apps are named `Xcodes.app`, so do not keep both installed. Automatic in-app updates are disabled so Sparkle cannot overwrite this fork.
+
 The easiest way to install and switch between multiple versions of Xcode.
 
 _If you're looking for a command-line version of Xcodes.app, try [`xcodes`](https://github.com/XcodesOrg/xcodes)._
-
-![CI](https://github.com/XcodesOrg/XcodesApp/workflows/CI/badge.svg)
 
 ![](screenshot_light.png#gh-light-mode-only)
 ![](screenshot_dark.png#gh-dark-mode-only)
@@ -69,18 +70,15 @@ v1.X - requires macOS 11 or newer
 v2.X - requires macOS 13
 v3.X - requires macOS 13 - architecture variants and updated icon.
 
-### Install with Homebrew
+### Install this fork
 
-Developer ID-signed and notarized release builds are available on Homebrew. These don't require Xcode to already be installed in order to use.
+Use this instead of official Xcodes if you sign in with a hardware security key. Both are `Xcodes.app`, so replace the official app rather than installing both.
 
-```sh
-brew install --cask xcodes
-```
+1. Quit official Xcodes and move `/Applications/Xcodes.app` to Trash if it is installed.
+2. Download **Xcodes.zip** from [Releases](https://github.com/arifali123/XcodesApp/releases/latest).
+3. Unzip and move this `Xcodes.app` to `/Applications`.
 
-### Manually install
-
-1. Download the latest version [here](https://github.com/XcodesOrg/XcodesApp/releases/latest) using the **Xcodes.zip** asset. These are Developer ID-signed and notarized release builds and don't require Xcode to already be installed in order to use.
-2. Move the unzipped `Xcodes.app` to your `/Applications` directory
+Do **not** use `brew install --cask xcodes` — Homebrew installs the official XcodesOrg build, which does not include this security-key fix.
 
 ## Support
 

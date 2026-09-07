@@ -228,7 +228,7 @@
 		CA9FF8512595080100E47BAF /* AcknowledgementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
 		CA9FF8652595130600E47BAF /* View+IsHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+IsHidden.swift"; sourceTree = "<group>"; };
 		CA9FF87A2595293E00E47BAF /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		CA9FF8AE2595967A00E47BAF /* com.xcodesorg.xcodesapp.Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.xcodesorg.xcodesapp.Helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9FF8AE2595967A00E47BAF /* com.xcodesorg.xcodesapp.Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.arifali123.Xcodesapp.Helper; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9FF8B02595967A00E47BAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CA9FF8C22595988B00E47BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9FF8C32595989800E47BAF /* launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = launchd.plist; sourceTree = "<group>"; };
@@ -776,6 +776,7 @@
 				E84E4F552B335094003F3959 /* XCRemoteSwiftPackageReference "swift-collections" */,
 				E83FDC422CBB649100679C6B /* XCRemoteSwiftPackageReference "Sparkle" */,
 				E899297E2FFDFA9A0019DB31 /* XCRemoteSwiftPackageReference "XcodesKit" */,
+				D971F8502E79102E005F84C9 /* XCRemoteSwiftPackageReference "LibFido2Swift" */,
 			);
 			productRefGroup = CAD2E79F2449574E00113D76 /* Products */;
 			projectDirPath = "";
@@ -1023,7 +1024,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = ZU6GR6B2FY;
+				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = 7YWQWYU7A8;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1059,7 +1060,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = XcodesIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = ZU6GR6B2FY;
+				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = 7YWQWYU7A8;
 				CODE_SIGN_ENTITLEMENTS = Xcodes/Resources/XcodesTest.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
@@ -1077,7 +1078,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 4.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xcodesorg.xcodesapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arifali123.Xcodesapp;
 				PRODUCT_NAME = Xcodes;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 6.0;
@@ -1112,10 +1113,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = ZU6GR6B2FY;
+				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = 7YWQWYU7A8;
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				DEVELOPMENT_TEAM = ZU6GR6B2FY;
+				DEVELOPMENT_TEAM = 7YWQWYU7A8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/$(TARGET_NAME)/Info.plist";
 				MARKETING_VERSION = 2.0.0;
@@ -1125,8 +1126,8 @@
 					__launchd_plist,
 					"$(SRCROOT)/${TARGET_NAME}/launchd.plist",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xcodesorg.xcodesapp.Helper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arifali123.Xcodesapp.Helper;
+				PRODUCT_NAME = com.arifali123.Xcodesapp.Helper;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "com.xcodesorg.xcodesapp.Helper/com.xcodesorg.xcodesapp.Helper-Bridging-Header.h";
 				SWIFT_VERSION = 6.0;
@@ -1137,7 +1138,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = ZU6GR6B2FY;
+				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = 7YWQWYU7A8;
 				CODE_SIGN_ENTITLEMENTS = com.xcodesorg.xcodesapp.Helper/com.xcodesorg.xcodesapp.HelperTest.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
@@ -1151,8 +1152,8 @@
 					__launchd_plist,
 					"$(SRCROOT)/${TARGET_NAME}/launchd.plist",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xcodesorg.xcodesapp.Helper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arifali123.Xcodesapp.Helper;
+				PRODUCT_NAME = com.arifali123.Xcodesapp.Helper;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "com.xcodesorg.xcodesapp.Helper/com.xcodesorg.xcodesapp.Helper-Bridging-Header.h";
@@ -1164,11 +1165,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = ZU6GR6B2FY;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = 7YWQWYU7A8;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				DEVELOPMENT_TEAM = ZU6GR6B2FY;
+				DEVELOPMENT_TEAM = 7YWQWYU7A8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/$(TARGET_NAME)/Info.plist";
 				MARKETING_VERSION = 2.0.0;
@@ -1178,8 +1179,8 @@
 					__launchd_plist,
 					"$(SRCROOT)/${TARGET_NAME}/launchd.plist",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xcodesorg.xcodesapp.Helper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arifali123.Xcodesapp.Helper;
+				PRODUCT_NAME = com.arifali123.Xcodesapp.Helper;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "com.xcodesorg.xcodesapp.Helper/com.xcodesorg.xcodesapp.Helper-Bridging-Header.h";
 				SWIFT_VERSION = 6.0;
@@ -1219,7 +1220,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = ZU6GR6B2FY;
+				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = 7YWQWYU7A8;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1283,7 +1284,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = ZU6GR6B2FY;
+				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = 7YWQWYU7A8;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1312,14 +1313,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = XcodesIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = ZU6GR6B2FY;
+				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = 7YWQWYU7A8;
 				CODE_SIGN_ENTITLEMENTS = Xcodes/Resources/Xcodes.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_ASSET_PATHS = "\"Xcodes/Preview Content\"";
-				DEVELOPMENT_TEAM = ZU6GR6B2FY;
+				DEVELOPMENT_TEAM = 7YWQWYU7A8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Xcodes/Resources/Info.plist;
@@ -1330,7 +1331,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 4.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xcodesorg.xcodesapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arifali123.Xcodesapp;
 				PRODUCT_NAME = Xcodes;
 				SWIFT_VERSION = 6.0;
 			};
@@ -1341,14 +1342,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = XcodesIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = ZU6GR6B2FY;
+				CODE_SIGNING_SUBJECT_ORGANIZATIONAL_UNIT = 7YWQWYU7A8;
 				CODE_SIGN_ENTITLEMENTS = Xcodes/Resources/Xcodes.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_ASSET_PATHS = "\"Xcodes/Preview Content\"";
-				DEVELOPMENT_TEAM = ZU6GR6B2FY;
+				DEVELOPMENT_TEAM = 7YWQWYU7A8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Xcodes/Resources/Info.plist;
@@ -1359,7 +1360,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 4.0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xcodesorg.xcodesapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arifali123.Xcodesapp;
 				PRODUCT_NAME = Xcodes;
 				SWIFT_VERSION = 6.0;
 			};
@@ -1372,7 +1373,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = ZU6GR6B2FY;
+				DEVELOPMENT_TEAM = 7YWQWYU7A8;
 				INFOPLIST_FILE = XcodesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1395,7 +1396,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = ZU6GR6B2FY;
+				DEVELOPMENT_TEAM = 7YWQWYU7A8;
 				INFOPLIST_FILE = XcodesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1403,7 +1404,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xcodesorg.xcodesapp.XcodesAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arifali123.Xcodesapp.XcodesAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 6.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Xcodes.app/Contents/MacOS/Xcodes";
@@ -1542,6 +1543,14 @@
 			requirement = {
 				branch = main;
 				kind = branch;
+			};
+		};
+		D971F8502E79102E005F84C9 /* XCRemoteSwiftPackageReference "LibFido2Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kinoroy/LibFido2Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.6;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
