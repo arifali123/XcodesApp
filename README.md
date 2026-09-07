@@ -1,7 +1,7 @@
 <h1><img src="icon.png" align="center" width=50 height=50 /> <img src="IconDark.png" align="center" width=50 height=50 /> <img src="IconMono.png" align="center" width=50 height=50 /> Xcodes.app</h1>
 
 > **This is a fork** of [XcodesOrg/XcodesApp](https://github.com/XcodesOrg/XcodesApp) with a hardware security-key sign-in fix ([LibFido2Swift 0.1.6](https://github.com/kinoroy/LibFido2Swift/releases/tag/0.1.6)).
-> Download builds from **[this repo's Releases](https://github.com/arifali123/XcodesApp/releases/latest)**, not the official XcodesOrg releases. Automatic in-app updates are disabled so Sparkle cannot overwrite this fork.
+> If your Apple account uses a hardware security key, **use this build instead of official Xcodes**. Both apps are named `Xcodes.app`, so do not keep both installed. Automatic in-app updates are disabled so Sparkle cannot overwrite this fork.
 
 The easiest way to install and switch between multiple versions of Xcode.
 
@@ -72,11 +72,13 @@ v3.X - requires macOS 13 - architecture variants and updated icon.
 
 ### Install this fork
 
-1. Download **Xcodes.zip** from [Releases](https://github.com/arifali123/XcodesApp/releases/latest).
-2. Unzip and move `Xcodes.app` to `/Applications`.
-3. This fork uses `com.arifali123.Xcodesapp`, so it can sit next to official Xcodes without sharing its privileged helper.
+Use this instead of official Xcodes if you sign in with a hardware security key. Both are `Xcodes.app`, so replace the official app rather than installing both.
 
-Do **not** use `brew install --cask xcodes` for this fork — Homebrew installs the official XcodesOrg build.
+1. Quit official Xcodes and move `/Applications/Xcodes.app` to Trash if it is installed.
+2. Download **Xcodes.zip** from [Releases](https://github.com/arifali123/XcodesApp/releases/latest).
+3. Unzip and move this `Xcodes.app` to `/Applications`.
+
+Do **not** use `brew install --cask xcodes` — Homebrew installs the official XcodesOrg build, which does not include this security-key fix.
 
 ## Support
 
