@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA9FF8AD2595967A00E47BAF"
-               BuildableName = "com.xcodesorg.xcodesapp.Helper"
+               BuildableName = "com.arifali123.Xcodesapp.Helper"
                BlueprintName = "com.xcodesorg.xcodesapp.Helper"
                ReferencedContainer = "container:Xcodes.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA9FF8AD2595967A00E47BAF"
-            BuildableName = "com.xcodesorg.xcodesapp.Helper"
+            BuildableName = "com.arifali123.Xcodesapp.Helper"
             BlueprintName = "com.xcodesorg.xcodesapp.Helper"
             ReferencedContainer = "container:Xcodes.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA9FF8AD2595967A00E47BAF"
-            BuildableName = "com.xcodesorg.xcodesapp.Helper"
+            BuildableName = "com.arifali123.Xcodesapp.Helper"
             BlueprintName = "com.xcodesorg.xcodesapp.Helper"
             ReferencedContainer = "container:Xcodes.xcodeproj">
          </BuildableReference>

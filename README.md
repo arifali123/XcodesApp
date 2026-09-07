@@ -1,10 +1,11 @@
 <h1><img src="icon.png" align="center" width=50 height=50 /> <img src="IconDark.png" align="center" width=50 height=50 /> <img src="IconMono.png" align="center" width=50 height=50 /> Xcodes.app</h1>
 
+> **This is a fork** of [XcodesOrg/XcodesApp](https://github.com/XcodesOrg/XcodesApp) with a hardware security-key sign-in fix ([LibFido2Swift 0.1.6](https://github.com/kinoroy/LibFido2Swift/releases/tag/0.1.6)).
+> Download builds from **[this repo's Releases](https://github.com/arifali123/XcodesApp/releases/latest)**, not the official XcodesOrg releases. Automatic in-app updates are disabled so Sparkle cannot overwrite this fork.
+
 The easiest way to install and switch between multiple versions of Xcode.
 
 _If you're looking for a command-line version of Xcodes.app, try [`xcodes`](https://github.com/XcodesOrg/xcodes)._
-
-![CI](https://github.com/XcodesOrg/XcodesApp/workflows/CI/badge.svg)
 
 ![](screenshot_light.png#gh-light-mode-only)
 ![](screenshot_dark.png#gh-dark-mode-only)
@@ -69,18 +70,13 @@ v1.X - requires macOS 11 or newer
 v2.X - requires macOS 13
 v3.X - requires macOS 13 - architecture variants and updated icon.
 
-### Install with Homebrew
+### Install this fork
 
-Developer ID-signed and notarized release builds are available on Homebrew. These don't require Xcode to already be installed in order to use.
+1. Download **Xcodes.zip** from [Releases](https://github.com/arifali123/XcodesApp/releases/latest).
+2. Unzip and move `Xcodes.app` to `/Applications`.
+3. This fork uses `com.arifali123.Xcodesapp`, so it can sit next to official Xcodes without sharing its privileged helper.
 
-```sh
-brew install --cask xcodes
-```
-
-### Manually install
-
-1. Download the latest version [here](https://github.com/XcodesOrg/XcodesApp/releases/latest) using the **Xcodes.zip** asset. These are Developer ID-signed and notarized release builds and don't require Xcode to already be installed in order to use.
-2. Move the unzipped `Xcodes.app` to your `/Applications` directory
+Do **not** use `brew install --cask xcodes` for this fork — Homebrew installs the official XcodesOrg build.
 
 ## Support
 

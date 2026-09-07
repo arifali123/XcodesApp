@@ -26,50 +26,10 @@ struct UpdatesPreferencePane: View {
             }
             .groupBoxStyle(PreferencesGroupBoxStyle())
             
-            Divider()
-            
-            GroupBox(label: Text("AppUpdates")) {
-                VStack(alignment: .leading) {
-                    Toggle(
-                        "CheckForAppUpdates",
-                        isOn: $updater.automaticallyChecksForUpdates
-                    )
-                    .fixedSize(horizontal: true, vertical: false)
-                    .disabled(updater.disableAutoUpdateXcodesApp)
-
-                    Toggle(
-                        "IncludePreRelease",
-                        isOn: $updater.includePrereleaseVersions
-                    )
-                    .disabled(updater.disableAutoUpdateXcodesAppPrereleaseVersions)
-
-                    Button("CheckNow") {
-                        updater.checkForUpdates()
-                    }
-                    .padding(.top)
-                    .disabled(updater.disableAutoUpdateXcodesApp)
-
-                    Text(String(format: localizeString("LastChecked"), lastUpdatedString))
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .groupBoxStyle(PreferencesGroupBoxStyle())
+            Text("This fork does not check for Xcodes.app updates. Download new builds from the GitHub releases page.")
+                .font(.footnote)
+                .foregroundStyle(.secondary)
         }
-    }
-    
-    private var lastUpdatedString: String {
-        if let lastUpdatedDate = updater.lastUpdateCheckDate {
-            return Self.formatter.string(from: lastUpdatedDate)
-        } else {
-            return localizeString("Never")
-        }
-    }
-    
-    private static let formatter = configure(DateFormatter()) {
-        $0.dateStyle = .medium
-        $0.timeStyle = .medium
     }
 }
 
@@ -77,81 +37,21 @@ struct UpdatesPreferencePane: View {
 class ObservableUpdater: ObservableObject {
     private let updater: SPUUpdater
     private let updaterDelegate = UpdaterDelegate()
-    
-    @Published var automaticallyChecksForUpdates = false {
-        didSet {
-            updater.automaticallyChecksForUpdates = automaticallyChecksForUpdates
-        }
-    }
-    private var automaticallyChecksForUpdatesObservation: NSKeyValueObservation?
-    @Published var lastUpdateCheckDate: Date?
-    private var lastUpdateCheckDateObservation: NSKeyValueObservation?
-    @Published var includePrereleaseVersions = false {
-        didSet {
-            Current.defaults.set(includePrereleaseVersions, forKey: "includePrereleaseVersions")
-
-            updaterDelegate.includePrereleaseVersions = includePrereleaseVersions
-        }
-    }
 
     var disableAutoInstallNewVersions: Bool { PreferenceKey.autoInstallation.isManaged() }
     var disableIncludePrereleaseVersions: Bool { PreferenceKey.autoInstallation.isManaged() }
 
-    var disableAutoUpdateXcodesApp: Bool { PreferenceKey.SUEnableAutomaticChecks.isManaged() }
-    var disableAutoUpdateXcodesAppPrereleaseVersions: Bool { PreferenceKey.includePrereleaseVersions.isManaged() }
-
     init() {
-        updater = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: updaterDelegate, userDriverDelegate: nil).updater
-        
-        // upgrade from an old sparkle version which set feeds via the updater
-        // now it uses the `updaterDelegate`
+        updater = SPUStandardUpdaterController(startingUpdater: false, updaterDelegate: updaterDelegate, userDriverDelegate: nil).updater
+        updater.automaticallyChecksForUpdates = false
         updater.clearFeedURLFromUserDefaults()
-        
-        automaticallyChecksForUpdatesObservation = updater.observe(
-            \.automaticallyChecksForUpdates, 
-            options: [.initial, .new, .old],
-            changeHandler: { [weak self] updater, change in
-                guard change.newValue != change.oldValue else { return }
-                let automaticallyChecksForUpdates = updater.automaticallyChecksForUpdates
-                Task { @MainActor [weak self] in
-                    self?.automaticallyChecksForUpdates = automaticallyChecksForUpdates
-                }
-            }
-        )
-        lastUpdateCheckDateObservation = updater.observe(
-            \.lastUpdateCheckDate, 
-            options: [.initial, .new, .old],
-            changeHandler: { [weak self] updater, change in
-                let lastUpdateCheckDate = updater.lastUpdateCheckDate
-                Task { @MainActor [weak self] in
-                    self?.lastUpdateCheckDate = lastUpdateCheckDate
-                }
-            }
-        )
-        includePrereleaseVersions = Current.defaults.bool(forKey: "includePrereleaseVersions") ?? false
-    }
-    
-    func checkForUpdates() {
-        updater.checkForUpdates()
     }
 }
 
 class UpdaterDelegate: NSObject, SPUUpdaterDelegate {
-    var includePrereleaseVersions: Bool = false
-    
     func feedURLString(for updater: SPUUpdater) -> String? {
-        if includePrereleaseVersions {
-            return .prereleaseAppcast
-        } else {
-            return .appcast
-        }
+        return nil
     }
-}
-
-
-extension String {
-    static let appcast = "https://www.xcodes.app/appcast.xml"
-    static let prereleaseAppcast = "https://www.xcodes.app/appcast_pre.xml"
 }
 
 struct UpdatesPreferencePane_Previews: PreviewProvider {
